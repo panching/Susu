@@ -308,6 +308,13 @@ header {
 h4 {
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
+}
+
+h5 {
+    color: red;
+    font-weight: bold; 
+    text-decoration:underline;
 }
 
 .info_sentence {
