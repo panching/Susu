@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>modal sample</title>
+  <!--載入 bootstrap css-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  
+  <!--依序載入 js 有先後順序問題後者蓋前者 後者可以用前者裡面的東西如果1.js裡面有一個function 1()後者才可以用1()-->
+
+  <!--載入 １.jquery (javascript 函式庫)-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!--載入 ２.popper (不知道什麼的函示庫per)-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <!--載入 3.bootstrap (bootstrap js 函示庫)-->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+  
+</head>
+<body>
+  <!-- html註解是長這樣 -->
+  <!-- 
+      點擊  Launch demo modal 會跳出視窗是因為 bootstrap 函式庫幫你做完了
+      所以你只需要再tag上加上bootstrap對應的attribute(attr)就像是 data-toggle && data-target
+      他就會幫你找id = exampleModal 的 div 包含的範圍內容 popup出來
+      class="btn btn-primary"的話就是 第七行載入boostrap.css屬性
+      其他button class可參考https://getbootstrap.com/docs/4.1/components/buttons/
+      切換不同的class就可以換顏色
+  -->
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+  <br/>
+  <br/>
+  <div class="btn btn-success" id="fackBtn">我是div假裝btn success按鈕</div>
+  <script type="text/javascript">
+    // script 註解是反斜線
+    // 這是jquery函式庫寫法
+    // #fackBtn 一樣是跟css一樣 .是找class #是找id
+    // 所以就是找id=fackBtn的tag執行on click javascript點擊的事件 執行function內程式
+    $('#fackBtn').click(function(){
+      // 找id=exampleModal的bootstap執行的modal()方法並帶上參數show
+      $('#exampleModal').modal('show');
+      
+      //舉例
+      fakeModal('show參數');
+    });
+
+    function fakeModal(arg){
+      // 可在chrome按檢查在consoles的tab下查看
+      console.log("印出參數arg："+arg);
+      // 找出modal-body的類別tag範圍然後把範圍內文字換掉
+      $('.modal-body').text('我把...換成'+arg);
+    }
+  </script>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
