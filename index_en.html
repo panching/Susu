@@ -59,7 +59,7 @@
                     </li>
 
                     <li>
-                       <a href="#" >Reservation!</a>
+                       <a href="#fb-root" >Reservation!</a>
                     </li>
                     <li>
                        <a href="index.html">繁體中文</a>
@@ -365,9 +365,7 @@
                     <div class="widget col-xs-12 col-sm-4 small_font" id='footer_access'>
                         <p>
                             Reservation：<br/>
-                            <!-- <a href="https://www.airbnb.com.tw/rooms/22656757?_branch_match_id=480880944082493527&ref_device_id=a7f6c6355a72f5b2744ee0a904a1ffe7e4167ab1&s=40&user_id=123153593" style="font-size: 20px">素宿之家Airbnb</a> -->
-                            <!-- <a class="btn btn-primary susuBtn"style="text-decoration: none;">SuSuHouse</a>
-                            <br/> -->
+                            If you want to booking room, <br/>please use messenger contact with fan page
                         </p>
                     </div>
                     <div class="widget col-xs-12 col-sm-5 map">
@@ -388,6 +386,22 @@
         <script src="assets/js/jquery.flexslider.js"></script>
         <script src="js/scripts.js"></script>
         <script src="assets/lightbox/js/lightbox.min.js"></script>
+        <!-- Load Facebook SDK for JavaScript -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 
+        <!-- Your customer chat code -->
+        <div class="fb-customerchat"
+          attribution=setup_tool
+          page_id="1740710492617641"
+          logged_in_greeting="Hi,If you want to booking room, please contact me!"
+          logged_out_greeting="Hi,If you want to booking room, please contact me!">
+        </div>  
     </body>
 </html>
