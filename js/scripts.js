@@ -4,11 +4,11 @@ $(document).ready(function() {
       animation: "slide"
   });
 
-  $('.susuBtn').click(function(){
-  	openModal();
-  });
+  // $('.susuBtn').click(function(){
+  // 	openModal();
+  // });
   
-  openModal();
+  // openModal();
 
   function openModal(){
 		$( "body" ).append( '<div id="modal-overlay"></div>' ) ;

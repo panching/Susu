@@ -13,6 +13,11 @@ body.hatena{
     line-height: 1.4em;
 }
 
+.rooms-img {
+    width: 400px;
+    height: 400px;
+}
+
 #news{
     width:80%;
     margin:0;
