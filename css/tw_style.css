@@ -14,12 +14,12 @@ body.hatena{
 }
 
 .banner-img {
-    width: 960px;
-    height: 720px !important;
+   /* width: 960px;
+    height: 720px !important;*/
 }
 .room-imgs,.food-imgs,.locate-imgs {
     width: 400px;
-    height: 400px;
+    height: 340px;
 }
 
 #news{
