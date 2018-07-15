@@ -13,7 +13,7 @@ body.hatena{
     line-height: 1.4em;
 }
 
-.rooms-img {
+.room-imgs,.food-imgs,.locate-imgs {
     width: 400px;
     height: 400px;
 }
