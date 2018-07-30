@@ -17,7 +17,8 @@ body.hatena{
    /* width: 960px;
     height: 720px !important;*/
 }
-.room-imgs,.food-imgs,.locate-imgs {
+/*.room-imgs,.food-imgs,*/
+.locate-imgs {
     width: 400px;
     height: 340px;
 }
