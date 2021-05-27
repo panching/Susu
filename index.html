@@ -6,7 +6,10 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160311018-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'UA-160311018-1');
@@ -307,12 +310,12 @@
           <li>無菜單~無國界的料理沒有一陳不變的料理，希望給您每次的用餐都是不同的驚喜。</li>
           <li>素宿創意料理~北陸加賀新鮮食材蹦出各種不同味蕾與視覺的新感受！</li>
           <li>如果對餐點更要求，例如不吃蛋奶、或不吃辣等辛香料，建議在訂位時提出。</li>
-          <li>午間套餐：11:00～14:30 / ¥1,500（10%稅別）</li>
-          <li>晚間套餐：18:30～21:00 / ¥2,000（10%稅別）</li>
+          <li>午間套餐：11:00～14:00 / ¥1,500（10%稅別）</li>
+          <li>晚間套餐：16:30～22:30 / ¥2,000（10%稅別）</li>
           <li>附熱飲：玉露茶或加賀棒茶。</li>
           <li>亦可選擇手沖咖啡單點一杯¥300。金澤是日本國內咖啡消費量排名位居前頭的城市、採用「金澤屋咖啡店」自家烘焙的咖啡豆、每一杯咖啡細心製作而成的。
           <li>訂金50%匯款方式：私聊（全額匯款送甜點）</li>
-          <li style="color: red">嚴禁飲酒. 請勿攜帶葷食入屋!</li>
+          <!-- <li style="color: red">嚴禁飲酒. 請勿攜帶葷食入屋!</li> -->
         </ul>
       </div>
       <br>
@@ -518,13 +521,17 @@
 
   <!-- Load Facebook SDK for JavaScript -->
   <div id="fb-root"></div>
-  <script>(function (d, s, id) {
+  <script>
+    (function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+      js = d.createElement(s);
+      js.id = id;
+      js.src =
+      'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
       fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 
   <!-- Your customer chat code -->
   <div class="fb-customerchat" attribution=setup_tool page_id="1740710492617641" logged_in_greeting="您好，如須訂房請與我聯絡喔！"

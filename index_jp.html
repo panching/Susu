@@ -6,7 +6,10 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160311018-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'UA-160311018-1');
@@ -302,13 +305,13 @@
       <div class='portfolio-message' id='food_rule'>
         <ul>
           <li>素宿の家は美味しいベジタリアンお任せ料理を提供しています。</li>
-          <li>昼ご飯(11:00-14:30): ¥1,500 (10%税別)</li>
-          <li>晩ご飯(18:30-21:00): ¥2,000 (10%税別)</li>
+          <li>昼ご飯(11:00-14:00): ¥1,500 (10%税別)</li>
+          <li>晩ご飯(16:30-22:30): ¥2,000 (10%税別)</li>
           <li>無料ドリンク: 玉露茶や加賀棒茶</li>
           <li>有料ドリンク: ハンドドリップコーヒー ¥300 （金澤屋珈琲店のコーヒー豆） </li>
           <li>料理代の半額は前払です。<br>そのため、素宿の家来る前に、Facebookで連絡してください。</li>
-          <li>素宿の家には<b>お酒飲むことやベジタリアン以外の食事は禁止です</b>。</li>
-          ご協力ありがとうございます。
+          <!-- <li>素宿の家には<b>お酒飲むことやベジタリアン以外の食事は禁止です</b>。</li> -->
+          <!-- ご協力ありがとうございます。 -->
         </ul>
       </div>
       <br>
@@ -495,13 +498,17 @@
   <script src="assets/lightbox/js/lightbox.min.js"></script>
   <!-- Load Facebook SDK for JavaScript -->
   <div id="fb-root"></div>
-  <script>(function (d, s, id) {
+  <script>
+    (function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+      js = d.createElement(s);
+      js.id = id;
+      js.src =
+      'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
       fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 
   <!-- Your customer chat code -->
   <div class="fb-customerchat" attribution=setup_tool page_id="1740710492617641"
